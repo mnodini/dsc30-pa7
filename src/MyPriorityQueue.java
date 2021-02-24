@@ -8,6 +8,7 @@
  * @param <T> Generic type
  */
 public class MyPriorityQueue<T extends Comparable<? super T>> {
+    private static final int DEFAULT_BRANCH = 5;
 
     private dHeap<T> pQueue;
 
@@ -17,7 +18,7 @@ public class MyPriorityQueue<T extends Comparable<? super T>> {
      * @param initialSize the given size
      */
     public MyPriorityQueue(int initialSize) {
-        pQueue = new dHeap<>(5,initialSize,true);
+        pQueue = new dHeap<>(DEFAULT_BRANCH,initialSize,true);
     }
 
     /**
