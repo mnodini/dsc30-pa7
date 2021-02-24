@@ -41,7 +41,7 @@ public class dHeap<T extends Comparable<? super T>> implements dHeapInterface<T>
     @SuppressWarnings("unchecked")
     public dHeap(int heapSize) {
         heap = (T[]) new Comparable[heapSize];
-        d = 0;
+        d = DEFAULT_BRANCH;
         nelems = 0;
         isMaxHeap = true;
     }
@@ -179,6 +179,10 @@ public class dHeap<T extends Comparable<? super T>> implements dHeapInterface<T>
      * @param index element that is being moved up
      */
     private void bubbleUp(int index) {
+        //Base Case
+        if(index == 0){
+            return;
+        }
         //Get values for child/parent
         T child = heap[index];
         int p_idx = parent(index);
