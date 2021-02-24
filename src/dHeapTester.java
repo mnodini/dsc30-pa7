@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
 
-public class dHeapTest {
+public class dHeapTester {
 
     dHeap<Integer> test1;
     dHeap<Integer> test2;
